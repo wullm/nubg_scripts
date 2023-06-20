@@ -21,8 +21,6 @@ for m, mass in enumerate(masses):
 		v = f["Neutrinos/FinalVelocities"][:]
 		# Close the file
 		f.close()
-		# Compute the speed
-		u = np.sqrt((v**2).sum(axis=1))
 		# Store the mean weight and weighted velocity
 		w_mean[m, k] = w.mean()
 		v_mean[m, k] = (v.T*w).mean(axis=1)
